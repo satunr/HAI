@@ -397,8 +397,8 @@ while T <= duration:
     num = getZones(gridLoc, Grid_X, Grid_Y)
     print('Ran on ', T, 'there have been ', failures, ' failures')
     truePop.append(num[zoneOfChoice])
-    if T>0: indvAlpha, indvBeta, avgd, lr = learnParams(N, S, CPs, CP_zone_, gridLoc, indvAlpha, indvBeta, lr)
-    if T>0: indvAlphaOpt, indvBetaOpt, avgdO, lr = learnParams(N, So, CPopt, CP_zone_O, gridLocO, indvAlphaOpt, indvBetaOpt, lr)
+    if T>0: indvAlpha, indvBeta, avgd, lr = learnParams(N, S, CPs, indvAlpha, indvBeta, lr)
+    if T>0: indvAlphaOpt, indvBetaOpt, avgdO, lr = learnParams(N, So, CPopt, indvAlphaOpt, indvBetaOpt, lr)
 
     CPRegTrack[T], CPOptTrack[T] = np.mean([CP_zone_[g] for g in Grid.keys()]), np.mean([CP_zone_O[g] for g in Grid.keys()]) #CP_zone_[zoneOfChoice], CP_zone_O[zoneOfChoice]
     for i in range(N):
