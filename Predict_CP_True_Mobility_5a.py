@@ -33,7 +33,7 @@ def seird(L, S, beta, prob, gamma, alpha_decay, CPs, delta, gridLoc, CP_zone_, d
 
     l = list(sorted(L.keys()))
 
-    L = getLoc(Grid, L, A, gridLoc, T)
+    L = getLoc(Grid, L, A, gridLoc)
 
     for i in range(len(l) - 1):
         for j in range(i + 1, len(l)):
@@ -173,7 +173,7 @@ CPs = {i: 1 if S[i] == 'I' else 0 for i in range(N)}
 # Run simulation
 # ====================
 T = 0
-L = getLoc(Grid, None, A, None, T)
+L = getLoc(Grid, None, A, None)
 gridLoc = find_grid(Grid, L)
 
 CP_zone_ = None
