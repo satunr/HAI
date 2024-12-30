@@ -255,10 +255,10 @@ risk = np.ones(N)
 riskAB = np.zeros(N)
 while T <= duration:
     oldS = deepcopy(S)
-    S, CPs, CPuse, L, gridLoc, CP_zone_, CP_zone_pred_= seird(rank, A, L, S, beta, prob, gamma, alpha_decay, CPs, CPuse, delta, gridLoc, CP_zone_, indvAlpha, indvBeta)
+    S, CPs, CPuse, L, gridLoc, CP_zone_, CP_zone_pred_= seird(rank, A, L, S, prob, gamma, CPs, CPuse, delta, gridLoc, CP_zone_, indvAlpha, indvBeta)
     num = getZones(gridLoc, Grid_X, Grid_Y)
     truePop.append(num[zoneOfChoice])
-    if T>0: indvAlpha, indvBeta, avgd, lr = learnParams(N, S, CPuse, CP_zone_, gridLoc, indvAlpha, indvBeta, lr)
+    if T>0: indvAlpha, indvBeta, avgd, lr = learnParams(N, S, CPuse, indvAlpha, indvBeta, lr)
     print(T)
     T += 1
 
