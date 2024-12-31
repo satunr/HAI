@@ -10,7 +10,7 @@
 ## Experiments and Corresponding Figures
 
 ### Predicting_Neighbors_4a
-<p align="justify">Compares the predicted number of neighbors of an individual with the true number of neighbors based on homogeneous mixing. This experiment corresponds to **Figure 4a**.</p>
+<p align="justify">Compares the predicted number of neighbors of an individual with the true number of neighbors based on homogeneous mixing. This experiment corresponds to ** Figure 4a **.</p>
 
 ### PageRank_Population_4b
 <p align="justify">Predicts mobility of individuals using PageRank to form the transition matrix between grids. The true population of a grid is compared with the predicted population of a grid. This experiment corresponds to **Figure 4b**.</p>
